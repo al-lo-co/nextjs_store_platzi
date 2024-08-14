@@ -10,8 +10,14 @@ const __dirname = dirname(__filename);
 const nextConfig = {
   sassOptions: {
     includePaths: [join(__dirname, 'src/sass')],
-    prependData: `@import "main.sass";`,
+    prependData: `@import "main.scss";`,
   },
+  images: {
+    remotePatterns: [{
+      hostname: 'cdn.shopify.com',
+      protocol: 'https'
+    }]
+  }
 };
 
 export default nextConfig;
