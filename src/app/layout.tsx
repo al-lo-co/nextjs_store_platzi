@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Oswald } from "next/font/google"; /* change the font */
 import { Header } from "app/components/shared/Header";
 import { Footer } from "app/components/shared/Footer";
-import { Description } from "app/components/home/Description";
-import { Hero } from "app/components/home/Hero";
 import "app/sass/global.scss"
 import "./globals.css";
 
@@ -26,8 +24,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={oswald.className}>
         <Header />
-        <Hero />
-        <Description />
         {children}
         <Footer />
       </body>
