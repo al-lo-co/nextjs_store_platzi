@@ -1,0 +1,11 @@
+.Hero {
+  margin: 10rem;
+}
+
+.Hero>h1 {
+  font-size: 5rem;
+  color: blueviolet;
+  text-align: center;
+}
+
+/* css modules */
