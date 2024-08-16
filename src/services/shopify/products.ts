@@ -36,8 +36,11 @@ export const getMainProducts = async () => {
     headers: new Headers({
       'X-Shopify-Access-Token': env.SHOPIFY_API_TOKEN
     }),
-    cache: 'no-cache'
-    // cache: 'force-cache' by default
+    //cache: 'no-cache'
+    cache: 'force-cache', // by default
+    next: {
+      tags: ['main-products']
+    }
     /*
     next: {
       revalidate: 10 //update in 10 sec 
