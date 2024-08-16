@@ -1,13 +1,15 @@
 import Image from 'next/image'
 import styles from './MainProducts.module.scss'
-import { getProducts } from 'app/services/shopify/products'
+import { getMainProducts, getProducts } from 'app/services/shopify/products'
 
 export const MainProducts = async () => {
   //const products = await getProducts()
 
-  const response = await fetch('http://localhost:3000/api')
+  //const response = await fetch('http://localhost:3000/api')
 
-  const { products } = await response.json()
+  //const { products } = await response.json()
+
+  const products = await getMainProducts()
 
   return (
     <section className={styles.MainProducts}>
