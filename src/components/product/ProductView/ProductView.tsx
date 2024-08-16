@@ -1,11 +1,19 @@
+"use client"
+
 import Image from "next/image";
 import { ProductViewItemsOrder } from "./ProductViewItemsOrder";
 import styles from './ProductView.module.scss'
+import { useRouter } from "next/navigation";
 interface ProductViewProps {
   product: ProductType
 }
 
 export const ProductView = ({ product }: ProductViewProps) => {
+
+  const router = useRouter()
+  if (!product) {
+    router.push('/') //client component manage redirect
+  }
 
   return (
     <main className={styles.ProductView}>
