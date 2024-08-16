@@ -1,9 +1,10 @@
+//"use client" useParams and useSearchParams for client component 
+
 import { ProductView } from "app/components/product/ProductView/ProductView"
 import { getProducts } from "app/services/shopify/products"
-import { redirect } from "next/navigation" // next/navigation for newer versions
-
+import { redirect, useParams, useSearchParams } from "next/navigation" // next/navigation for newer versions
 interface ProductPageProps {
-  searchParams: {
+  searchParams: { //server component
     id: string
   }
 }
@@ -26,6 +27,9 @@ export async function generateMetadata({ searchParams }: ProductPageProps) {
 }
 
 export default async function ProductPage({ searchParams }: ProductPageProps) {
+  //const params = useParams() //hook and not async
+  //const uSearchParams = useSearchParams()
+
   const id = searchParams.id
 
   const products = await getProducts(id)
