@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "analyze": "ANALYZE=true  next build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.2.7",
     "ai": "^3.3.21",
     "classnames": "^2.5.1",
     "graphql-request": "^7.1.0",
