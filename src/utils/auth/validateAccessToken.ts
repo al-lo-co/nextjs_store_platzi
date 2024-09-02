@@ -8,7 +8,12 @@ export const validateAccessToken = async () => {
   const graphqlClient = GraphQLClientSingleton.getInstance().getClient()
 
   try {
-    const { customer } = await graphqlClient.request(customerName, {
+    const { customer }: {
+      customer: {
+        firstName: string
+        email: string
+      }
+    } = await graphqlClient.request(customerName, {
       customerAccessToken: accessToken
     })
     return customer
