@@ -14,10 +14,14 @@ export class GraphQLClientSingleton {
   }
 
   getClient(): GraphQLClient {
+    const headers: Record<string, string> = {};
+
+    if (env.SHOPIFY_STOREFRONT_TOKEN) {
+      headers['Shopify-Storefront-Private-Token'] = env.SHOPIFY_STOREFRONT_TOKEN;
+    }
+
     return new GraphQLClient(this.endpoint, {
-      headers: {
-        'Shopify-Storefront-Private-Token': env.SHOPIFY_STOREFRONT_TOKEN,
-      },
+      headers,
     });
   }
 }

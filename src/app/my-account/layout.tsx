@@ -1,4 +1,4 @@
-import styles from './MyAccount.module.sass'
+import styles from './MyAccount.module.scss'
 interface MyAccountLayoutProps {
   children: React.ReactNode;
   ordersInfo: React.ReactNode;
