@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { useShoppingCart } from "app/hooks/useShoppingCart";
 import { handleCreateCart } from "app/actions";
-import styles from './shoppingCart.module.scss'
+import styles from './ShoppingCart.module.scss'
 import { ShoppingCartItem } from "./shoppingCartItem";
 
 export default function ShoppingCart() {

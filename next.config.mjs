@@ -14,8 +14,8 @@ const bundleAnalyzer = withBundleAnalyzer({
 
 const nextConfig = {
   sassOptions: {
-    includePaths: [join(__dirname, 'src/sass')],
-    prependData: `@import "main.scss";`,
+    includePaths: [join(__dirname, 'src/scss')],
+    prependData: `@import './src/sass/main.scss';`,
   },
   images: {
     remotePatterns: [{
