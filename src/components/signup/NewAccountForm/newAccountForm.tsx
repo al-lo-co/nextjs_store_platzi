@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import styles from "./NewAccountForm.module.scss";
+import styles from "./newAccountForm.module.scss";
 import { handleCreateUser } from "app/actions";
 
 export const NewAccountForm = () => {

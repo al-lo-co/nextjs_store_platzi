@@ -1,7 +1,7 @@
 "use client"
 import { handleLogin } from "app/actions";
 import { SyntheticEvent } from "react";
-import styles from "./LoginForm.module.scss";
+import styles from "./loginForm.module.scss";
 
 export const LoginForm = () => {
 

@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { FaRegTrashCan } from "react-icons/fa6";
 import { useShoppingCart } from 'app/hooks/useShoppingCart';
-import styles from './ShoppingCartItem.module.scss'
+import styles from './shoppingCartItem.module.scss'
 
 
 interface ShoppingCartItemProps {
